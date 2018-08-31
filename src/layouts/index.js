@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import './index.css'
+import '../styles/octanis.scss'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -14,17 +14,17 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
+    <Header siteTitle={data.site.siteMetadata.title} mastHead={
+         <div className="masterhead relative-parent">
+           <h1 className="oc-brand-indicator">Learning means solving problems</h1>
+           <p className="sm-w-3/5">At Octanis, we provide an environment where we turn theory into practice and learning means doing. We share experiences and tools, and make rapid incremental progress while embracing failure.  Above all, we accept everyone for who they are.
+           </p>
+           <a className="btn btn--large btn--primary cta" href="/about">How it works</a><br/>
+         </div>
+    }/>
+
+    {children()}
+
   </div>
 )
 
