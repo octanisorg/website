@@ -17,11 +17,11 @@ class Header extends React.Component {
 
   render(){
     return (
-      <header className="clearfix padded full">
+      <header className={this.props.mastHead ? ("clearfix padded full"):"clearfix padded"}>
 
-        <Navbar isTransparent>
+        <Navbar isTransparent style={{zIndex: 1000}}>
          <NavbarBrand>
-           <NavbarItem>
+           <NavbarItem style={{padding: 0}}>
              <img src="/img/white_logo.png" />
            </NavbarItem>
          </NavbarBrand>
@@ -31,14 +31,14 @@ class Header extends React.Component {
                   <NavbarItem hasDropdown isHoverable>
                       <NavbarItem href='#'>About</NavbarItem>
 
-                      <NavbarDropdown>
+                      <NavbarDropdown isBoxed>
                           <NavbarItem href='#/'>What is Octanis?</NavbarItem>
                           <NavbarItem href='#/'>People</NavbarItem>
                           <NavbarItem href='#/'>For Students</NavbarItem>
                       </NavbarDropdown>
                   </NavbarItem>
 
-                 <NavbarItem href='#/'>Makerspace</NavbarItem>
+                 <NavbarItem href='/makerspace'>Atelier</NavbarItem>
                  <NavbarItem href='#/'>Projects</NavbarItem>
 
                  <NavbarItem href='#/'>Events</NavbarItem>
@@ -48,9 +48,9 @@ class Header extends React.Component {
          </NavbarMenu>
        </Navbar>
 
+       {this.props.mastHead}
 
 
-        {this.props.mastHead}
       </header>
     )
   }
