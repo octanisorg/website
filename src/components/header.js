@@ -27,20 +27,19 @@ class Header extends React.Component {
          </NavbarBrand>
          <NavbarMenu className="main-nav" isActive={this.state.isActive} onClick={this.onClickNav}>
              <NavbarEnd>
-
                   <NavbarItem hasDropdown isHoverable>
                       <NavbarItem href='#'>About</NavbarItem>
 
                       <NavbarDropdown isBoxed>
-                          <NavbarItem href='#/'>What is Octanis?</NavbarItem>
                           <NavbarItem href='#/'>People</NavbarItem>
-                          <NavbarItem href='#/'>For Students</NavbarItem>
+                          <NavbarItem href='#/'>Membership</NavbarItem>
+                          <NavbarItem href='#/'>Association</NavbarItem>
+                          <NavbarItem href='#/'>Services</NavbarItem>
                       </NavbarDropdown>
                   </NavbarItem>
 
                  <NavbarItem href='/makerspace'>Atelier</NavbarItem>
                  <NavbarItem href='#/'>Projects</NavbarItem>
-
                  <NavbarItem href='#/'>Events</NavbarItem>
 
              </NavbarEnd>

@@ -113,7 +113,7 @@ h3.subtitle {
   left: 0;
   right: 0;
 
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
 
 }
 
@@ -149,7 +149,7 @@ h3.subtitle {
     content: "";
     display: block;
     background: $brand-color;
-    height: $spacing-unit-tiny;
+    height: $spacing-unit-tiny*1.5;
     width: $spacing-unit-huge*2;
     margin: $spacing-unit-small 0 $spacing-unit-huge 0;
 }
@@ -179,6 +179,12 @@ h3.subtitle {
 
 header .masterhead {
 	margin-top: 5*$spacing-unit-huge;
+}
+
+header .masterhead p {
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 1.4em;
 }
 
 .masterhead, .grid {z-index: 100; position: relative;}

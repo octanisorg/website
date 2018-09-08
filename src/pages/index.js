@@ -98,3 +98,11 @@ const IndexPage = ({data}) => (
 )
 
 export default IndexPage
+export const query = graphql`
+  query HomeQuery {
+    page(slug: { eq: "home" }) {
+      title
+      content
+    }
+  }
+`
